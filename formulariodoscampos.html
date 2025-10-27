@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>campos com formulario</title>
+</head>
+<body>
+
+       <h1> formula </h1>
+         <form action="" method="post">
+
+            <fieldset>
+               <legend> Dados Pessoais </legend>
+              
+               <label for="nome"> Nome completo:</label>
+               <input type="text" id="nome" name="nome" required>
+
+               <label for="data de nascimento"> data de nascimento:</label>
+               <input type="number" id="data de nascimento" name="data de nascimento" required>
+               
+               
+               <label for="genero"> genero:</label>
+               <input type="text" id="genero" name="genero" required>
+
+               <label for="CPF"> seu CPF:</label>
+               <input type="number" id="CPF" name="CPF" required>
+               
+              
+               <label for="E-mail"> E-mail:</label>
+               <input type="email" id="E-mail" name="E-mail" required>
+
+
+            </fieldset>
+    
+            <fieldset>
+               <legend> Histórico De Saúde </legend>
+              
+               <label>Nome:</label>
+               <input type="text" name="nome">
+
+               <label>doença cronica:</label>
+               <label><input type="radio" name="Doença cronica" value="Sim"> SIM </label>
+               <label><input type="radio" name="Doença cronica" value="NÃO"> NÃO </label>
+               
+               <label for= "nome"> Nome:</label>
+               <input type="text" id="nome" name="nome">
+
+               <label for="medicamentos utiliza"> Quais medicamentos voçê utiliza regula </label>
+               <textarea id="medicamentos utiliza " name="medicamentos utiliza" rows="8" cols="50" placeholder="Digite"></textarea>
+  
+               <input type="checkbox" id="fuma" name="objeto" value="fuma">
+               <label for="Você fuma?"> Sim </label>
+               
+            
+               <label for="altura "> altura (em cm):</label>
+               <input type="number" id="Altura" name="Altura" required>
+            
+               
+               <label for="Peso"> Seu Peso (em Kg):</label>
+               <input type="number" id="Peso" name="Peso" required>
+               
+               
+            </fieldset>
+
+
+
+            <fieldset>
+               <legend> Detalhes De Consulta</legend>
+              
+               <label for= "nome"> Nome:</label>
+               <input type="text" id="nome" name="nome">
+
+               <label for="motivo da consukta"> Qual é o principal motivo da consulta? </label>
+               <textarea id="motivo da Consulta " name="motivo da consulta" rows="4" cols="50" placeholder="escreva aqui"></textarea>
+  
+
+
+               <label for="frequecia">Com que Frequencia você pratica exercicios fisicos?:</label>
+               <select id="Frequencia" name="Frequencia">
+               <option value="Diariamente">Diariamente</option>
+               <option value="Semanalmente">Semanalmente</option>
+               <option value="Raramente"> Raramente</option>
+               <option value="Nunca"> Nunca</option>
+            </select>
+            
+
+                <label for=" data da ultima consulta"> Data da Ultima Consulta :</label>
+                <input type="number" id="data da ultima consulta" name="data da ultima consulta" required>
+            
+                <label>Nome:</label>
+               <input type="text" name="nome">
+
+               <label>Pode ser contatado por:</label>
+               <label><input type="radio" name="Pode ser contatado por:" value="Telefone"> Telefone </label>
+               <label><input type="radio" name="Pode ser contatado por" value="E-mail"> Email </label>
+            </fieldset>
+
+
+        <button type="submit"> Enviar </button>
+
+         
+    </form>
+</body>
+</html>
