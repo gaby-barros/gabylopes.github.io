@@ -1,0 +1,413 @@
+/*
+ * PALETA DE CORES ORIGINAL
+ * Vermelho/Vinho, Preto Antracite e Dourado para Destaque.
+ */
+:root {
+    --cor-primaria: #A00000;    /* Vinho / Vermelho escuro e profundo */
+    --cor-secundaria: #1A1A1A;  /* Preto Antracite / Quase preto para fundos */
+    --cor-destaque: #FFD700;    /* Dourado (para detalhes de troféus e destaque) */
+    --cor-fundo: #0D0D0D;       /* Fundo muito escuro principal */
+    --cor-texto-claro: #F0F0F0;
+    --cor-texto-escuro: #4A4A4A;
+}
+
+/* RESET E ESTILOS GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: 'Roboto', 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', 'Impact', sans-serif; 
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-texto-claro);
+}
+
+.titulo-secao {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+.cabecalho-principal {
+    background-color: var(--cor-secundaria);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--cor-primaria);
+}
+
+.logo-texto {
+    font-size: 2.2rem;
+    color: var(--cor-texto-claro);
+    letter-spacing: 4px;
+}
+
+.menu-navegacao a {
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 15px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Efeito Angular no Menu (Originalidade) */
+.menu-navegacao a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 120%;
+    height: 100%;
+    background-color: var(--cor-primaria); 
+    transform: skewX(-20deg); /* Inclinação */
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.menu-navegacao a:hover::before {
+    left: 0; 
+}
+
+/* SEÇÃO DESTAQUE (CONFRONTO) */
+.secao-destaque {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: var(--cor-secundaria);
+    /* Cria um corte diagonal na base da seção */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
+    margin-bottom: -5vh; /* Ajuste para a próxima seção */
+    position: relative;
+    z-index: 5;
+}
+
+.card-confronto {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 40px;
+    border-radius: 8px;
+    border: 3px solid var(--cor-destaque);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.placar-simulado {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3.5rem;
+    margin: 30px 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.time-casa {
+    color: var(--cor-primaria);
+}
+
+.vs {
+    font-size: 2rem;
+    color: var(--cor-destaque);
+}
+
+.btn-detalhes {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-detalhes:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-secundaria);
+}
+
+
+/* SEÇÃO NOTÍCIAS (GRID) */
+.secao-grid-noticias {
+    padding: 50px 5%;
+    background-color: var(--cor-fundo);
+}
+
+.container-noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card-noticia {
+    background-color: var(--cor-secundaria);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card-noticia:hover {
+    transform: translateY(-5px); 
+    border-top: 5px solid var(--cor-destaque);
+}
+
+.card-noticia img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.corpo-noticia {
+    padding: 20px;
+}
+
+.btn-ler-mais {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* SEÇÃO ELENCO (GUERREIROS) */
+.secao-elenco {
+    padding: 80px 5%;
+    background-color: var(--cor-secundaria);
+    text-align: center;
+}
+
+.container-jogadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card-jogador {
+    background-color: var(--cor-fundo); 
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card-jogador:hover {
+    transform: translateY(-8px); 
+}
+
+/* Detalhe Angular Rubro-Negro na Lateral (Originalidade) */
+.card-jogador::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%; 
+    height: 100%;
+    background-color: var(--cor-primaria); 
+    /* Corte diagonal na faixa vertical */
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); 
+    z-index: 1; 
+}
+
+.foto-jogador {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2; 
+    filter: grayscale(80%); /* Efeito dramático */
+    transition: filter 0.5s;
+}
+
+.card-jogador:hover .foto-jogador {
+    filter: grayscale(0%); /* Revela a cor no hover */
+}
+
+.nome-jogador {
+    font-size: 1.4rem;
+    color: var(--cor-texto-claro);
+    margin-top: 5px;
+}
+
+.posicao {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* SEÇÃO HISTÓRICO (LINHA DO TEMPO) */
+.secao-historico {
+    padding: 100px 5%;
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+.linha-do-tempo {
+    position: relative;
+    max-width: 900px;
+    margin: 50px auto 0 auto;
+}
+
+/* A Linha Central Vertical */
+.linha-do-tempo::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--cor-primaria); 
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.marco-historico {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    left: 0; 
+    margin-bottom: 40px;
+}
+
+.detalhe-titulo {
+    padding: 20px;
+    background-color: var(--cor-secundaria); 
+    border-radius: 6px;
+    text-align: right; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Ponto de Destaque na Linha (Dourado) */
+.marco-historico::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -9px; 
+    background-color: var(--cor-destaque); 
+    border: 3px solid var(--cor-primaria);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Estilo para Títulos Especiais (destaque) */
+.marco-historico.destaque .detalhe-titulo {
+    background-color: var(--cor-primaria); 
+    color: var(--cor-texto-claro);
+    border: 1px solid var(--cor-destaque);
+}
+
+.marco-historico.destaque .detalhe-titulo h3 {
+    color: var(--cor-destaque);
+}
+
+/* Alternando os Itens (Lado Direito) */
+.marco-historico:nth-child(even) {
+    left: 50%;
+    text-align: left; 
+    padding-left: 40px;
+    padding-right: 10px;
+}
+
+.marco-historico:nth-child(even) .detalhe-titulo {
+    text-align: left; 
+}
+
+.marco-historico:nth-child(even)::after {
+    left: -9px; 
+    right: auto;
+}
+
+/* RODAPÉ */
+.rodape-info {
+    background-color: #000000;
+    padding: 20px 5%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto-escuro);
+}
+
+/* RESPONSIVIDADE (Para Telas Pequenas/Celulares) */
+@media (max-width: 768px) {
+    .cabecalho-principal {
+        flex-direction: column;
+    }
+
+    .logo-area {
+        margin-bottom: 15px;
+    }
+
+    .menu-navegacao a {
+        margin: 0 10px;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    .titulo-secao {
+        font-size: 2rem;
+    }
+
+    /* Linha do Tempo Fica em Coluna Única */
+    .linha-do-tempo::before {
+        left: 25px; /* Move a linha para a esquerda */
+    }
+
+    .marco-historico {
+        width: 100%;
+        padding-left: 60px; /* Cria espaço para a linha da esquerda */
+        padding-right: 10px;
+        left: 0;
+    }
+
+    .marco-historico::after {
+        left: 17px; /* Reposiciona o círculo na nova linha */
+        right: auto;
+    }
+    
+    .marco-historico:nth-child(even) {
+        left: 0;
+        padding-left: 60px;
+        padding-right: 10px;
+    }
+    
+    .marco-historico:nth-child(even) .detalhe-titulo {
+        text-align: left; 
+    }
+
+    .marco-historico:nth-child(even)::after {
+        left: 17px;
+    }
+    
+    .detalhe-titulo {
+        text-align: left; 
+    }
+
+}
