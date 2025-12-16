@@ -7,26 +7,26 @@
 
 /* BASE */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  background-color: #ffffff;
+  background: #ffffff;
   color: #222;
 }
 
-/* MENU LATERAL */
-.sidebar {
-  width: 230px;
+/* MENU */
+.menu {
+  width: 240px;
   height: 100vh;
   background: #ffcc00;
   padding: 30px 20px;
 }
 
-.sidebar h1 {
+.menu h1 {
   font-size: 22px;
   margin-bottom: 40px;
 }
 
-.sidebar nav a {
+.menu nav a {
   display: block;
   text-decoration: none;
   color: #000;
@@ -35,15 +35,15 @@ body {
 }
 
 /* CONTEÚDO */
-.content {
+.container {
   flex: 1;
   padding: 40px;
 }
 
-/* HERO */
-.hero {
-  height: 300px;
-  border-radius: 20px;
+/* BANNER PRINCIPAL */
+.banner {
+  height: 320px;
+  border-radius: 22px;
   padding: 50px;
   margin-bottom: 80px;
   display: flex;
@@ -52,95 +52,94 @@ body {
   background: linear-gradient(
     135deg,
     #ffcc00,
-    #ffe066,
-    #fff2b3
+    #ffe680,
+    #fff7cc
   );
 }
 
-.hero-text {
+.banner-text {
   max-width: 520px;
 }
 
-.hero h2 {
+.banner h2 {
   font-size: 34px;
   margin-bottom: 15px;
 }
 
-.hero p {
+.banner p {
   line-height: 1.6;
   margin-bottom: 25px;
 }
 
-.hero button {
-  padding: 12px 26px;
+.banner button {
+  padding: 12px 28px;
   border: none;
-  border-radius: 8px;
-  background: #ffffff;
+  border-radius: 10px;
+  background: #fff;
   font-weight: bold;
   cursor: pointer;
 }
 
-/* SEÇÃO DESTAQUE */
-.secao-destaque {
+/* SEÇÃO COM BANNER LATERAL */
+.layout-info {
   display: flex;
   gap: 40px;
   margin-bottom: 80px;
   align-items: center;
 }
 
-/* TEXTO */
-.texto-destaque {
+.info-text {
   flex: 1;
 }
 
-.texto-destaque h2 {
+.info-text h2 {
   font-size: 26px;
   margin-bottom: 15px;
 }
 
-.texto-destaque p {
+.info-text p {
   max-width: 420px;
   margin-bottom: 30px;
 }
 
 /* CARDS PEQUENOS */
-.cards-pequenos {
+.mini-cards {
   display: flex;
   gap: 15px;
 }
 
-.card-mini {
-  padding: 12px 16px;
+.mini-card {
+  padding: 12px 18px;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 12px;
   font-size: 14px;
   font-weight: bold;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-/* BANNER LATERAL */
-.banner-lateral {
-  width: 320px;
-  height: 360px;
-  border-radius: 20px;
+/* BANNER LATERAL TECNOLOGIA */
+.tech-banner {
+  width: 340px;
+  height: 380px;
+  border-radius: 24px;
   background-image:
     linear-gradient(
-      rgba(255,204,0,0.3),
-      rgba(255,204,0,0.3)
+      rgba(255,204,0,0.35),
+      rgba(255,204,0,0.35)
     ),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+    url("https://images.unsplash.com/photo-1519389950473-47ba0277781c");
 
   background-size: cover;
   background-position: center;
 }
 
-/* TEXTOS SIMPLES */
+/* TEXTO CENTRAL */
 section h2 {
   font-size: 26px;
   margin-bottom: 20px;
 }
 
-.texto-central {
+.center-text {
   max-width: 600px;
   line-height: 1.6;
 }
