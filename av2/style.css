@@ -1,0 +1,85 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* MENU VERTICAL */
+aside {
+  width: 220px;
+  height: 100vh;
+  background-color: #ffcc00;
+  padding: 20px;
+}
+
+aside h1 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+aside nav a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+aside nav a:hover {
+  text-decoration: underline;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  flex: 1;
+  padding: 40px;
+}
+
+/* SEÇÕES */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 16px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #fffef5;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* RODAPÉ */
+footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
