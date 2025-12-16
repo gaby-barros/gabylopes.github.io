@@ -2,59 +2,75 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Framework</title>
-
-  <!-- LINK DO CSS -->
+  <title>site para APP</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- MENU -->
-  <aside>
-    <h1>MeuApp</h1>
+  <!-- MENU LATERAL -->
+  <aside class="sidebar">
+    <h1>SITE PARA APP</h1>
     <nav>
       <a href="#inicio">Início</a>
       <a href="#recursos">Recursos</a>
-      <a href="#documentacao">Documentação</a>
-      <a href="#colaboração">Colaboração</a>
+      <a href="#caracteristicas">Caracteristicas</a>
+      <a href="#colaboracao">Colaboração</a>
     </nav>
   </aside>
 
   <!-- CONTEÚDO -->
-  <main>
+  <main class="content">
 
-    <section id="inicio">
-      <h2>Crie aplicativos com facilidade</h2>
-      <p>
-        Uma plataforma simples e organizada para desenvolver interfaces
-        modernas, reutilizáveis e bem estruturadas.
-      </p>
-    </section>
-
-    <section id="recursos">
-      <h2>Principais recursos</h2>
-
-      <div class="cards">
-        <div class="card">Componentes reutilizáveis</div>
-        <div class="card">Código limpo e organizado</div>
-        <div class="card">Compatível com várias plataformas</div>
+    <!-- HERO / BANNER -->
+    <section class="hero" id="inicio">
+      <div class="hero-text">
+        <h2>Criação de soluções digitais</h2>
+        <p>
+          Um projeto com visual moderno para demonstrar organização,
+          clareza e boas práticas no desenvolvimento de aplicações.
+        </p>
+        <button>Conhecer projeto</button>
       </div>
     </section>
 
-    <section id="documentacao">
-      <h2>Documentação objetiva</h2>
-      <p>
-        Aprenda passo a passo como criar, organizar e evoluir seus projetos
-        com guias claros e exemplos simples.
+    <!-- RECURSOS -->
+    <section id="recursos">
+      <h2>Recursos do projeto</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Visual moderno</h3>
+          <p>Interface clara com foco em leitura e organização.</p>
+        </div>
+
+        <div class="card">
+          <h3>Estrutura limpa</h3>
+          <p>Separação lógica dos elementos do site.</p>
+        </div>
+
+        <div class="card">
+          <h3>Projeto evolutivo</h3>
+          <p>Base preparada para futuras melhorias.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIAS -->
+    <section id="guias">
+      <h2>Conteúdo explicativo</h2>
+      <p class="texto-central">
+        Materiais criados para apoiar o aprendizado e o entendimento
+        da estrutura de aplicações modernas.
       </p>
     </section>
 
-    <section id="comunidade">
-      <h2>Comunidade ativa</h2>
-      <p>
-        Participe, compartilhe conhecimento e aprenda com outros desenvolvedores
-        em um ambiente colaborativo.
+    <!-- COLABORAÇÃO -->
+    <section id="colaboracao">
+      <h2>Espaço de colaboração</h2>
+      <p class="texto-central">
+        Área destinada à troca de ideias e construção coletiva
+        de conhecimento em projetos educacionais.
       </p>
     </section>
 
