@@ -13,7 +13,7 @@ body {
   color: #222;
 }
 
-/* SIDEBAR */
+/* MENU LATERAL */
 .sidebar {
   width: 230px;
   height: 100vh;
@@ -58,15 +58,16 @@ body {
 }
 
 .hero-text {
-  max-width: 500px;
+  max-width: 520px;
 }
 
 .hero h2 {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 15px;
 }
 
 .hero p {
+  line-height: 1.6;
   margin-bottom: 25px;
 }
 
@@ -117,12 +118,11 @@ body {
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
 
-/* BANNER LATERAL COM IMAGEM */
+/* BANNER LATERAL */
 .banner-lateral {
   width: 320px;
   height: 360px;
   border-radius: 20px;
-
   background-image:
     linear-gradient(
       rgba(255,204,0,0.3),
@@ -134,7 +134,7 @@ body {
   background-position: center;
 }
 
-/* SEÇÕES SIMPLES */
+/* TEXTOS SIMPLES */
 section h2 {
   font-size: 26px;
   margin-bottom: 20px;
